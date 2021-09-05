@@ -1,10 +1,10 @@
 import './App.css';
-import Paperbase from './components/Paperbase';
+import Paperbase from './components/templates/Paperbase';
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <Paperbase root = "anpanman"></Paperbase>
+      <Paperbase root = ""></Paperbase>
     </div>
   );
 }

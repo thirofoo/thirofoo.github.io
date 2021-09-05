@@ -1,4 +1,5 @@
 import React from 'react';
+// import { children } from 'react';
 import clsx from 'clsx';
 import { createStyles, Theme, withStyles, WithStyles } from '@material-ui/core/styles';
 import Divider from '@material-ui/core/Divider';
@@ -15,27 +16,10 @@ import { Omit } from '@material-ui/types';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import { useState } from 'react';
+// import { Category } from '@material-ui/icons';
 
-const categories = [
-  {
-    id: 'Detail',
-    children: [
-      { id: 'Home', icon: <HomeIcon />, active: true },
-      { id: 'Profile', icon: <EmojiPeopleIcon />},
-      { id: 'Product', icon: <DnsRoundedIcon /> },
-      { id: 'Config', icon: <SettingsIcon /> }
-    ],
-  },
-  {
-    id: 'Accounts',
-    children: [
-      
-      { id: 'twitter', icon: <TwitterIcon /> },
-      { id: 'instagram', icon: <InstagramIcon /> },
-      { id: 'Github', icon: <GitHubIcon /> }
-    ],
-  },
-];
+
 
 const styles = (theme: Theme) =>
   createStyles({
@@ -84,11 +68,54 @@ export interface NavigatorProps extends Omit<DrawerProps, 'classes'>, WithStyles
 function Navigator(props: NavigatorProps) {
   const { classes, ...other } = props;
 
+  const [homeActive, setHomeActive] = useState(true);
+  const [profileActive, setProfileActive] = useState(false);
+  const [productActive, setProductActive] = useState(false);
+  const [configActive, setConfigActive] = useState(false);
+
+  function setActive(childId: string) {
+
+    setHomeActive(false)
+    setProfileActive(false)
+    setProductActive(false)
+    setConfigActive(false)
+
+    if(childId == "Home")setHomeActive(true);
+    if(childId == "Profile")setProfileActive(true);
+    if(childId == "Product")setProductActive(true);
+    if(childId == "Config")setConfigActive(true);
+    if(childId == "Twitter" ) window.location.href = 'https://twitter.com/through__TH';
+    if(childId == "Instagram") window.location.href = 'https://www.instagram.com/thirofoo/';
+    if(childId == "Github") window.location.href = 'https://github.com/thirofoo';
+
+  }
+
+
+  const categories = [
+    {
+      id: 'Detail',
+      children: [
+        { id: 'Home', icon: <HomeIcon />, active: homeActive},
+        { id: 'Profile', icon: <EmojiPeopleIcon />, active: profileActive},
+        { id: 'Product', icon: <DnsRoundedIcon />, active: productActive},
+        { id: 'Config', icon: <SettingsIcon />, active: configActive}
+      ],
+    },
+    {
+      id: 'Accounts',
+      children: [
+        { id: 'Twitter', icon: <TwitterIcon />, active: false},
+        { id: 'Instagram', icon: <InstagramIcon />, active: false },
+        { id: 'Github', icon: <GitHubIcon />, active: false }
+      ],
+    },
+  ];
+
   return (
     <Drawer variant="permanent" {...other}>
       <List disablePadding>
         <ListItem className={clsx(classes.firebase, classes.item, classes.itemCategory)}>
-          T.Hiroto
+          T.Hiroto 
         </ListItem>
         <ListItem className={clsx(classes.item, classes.itemCategory)}>
           <ListItemIcon className={classes.itemIcon}>
@@ -99,9 +126,10 @@ function Navigator(props: NavigatorProps) {
               primary: classes.itemPrimary,
             }}
           >
-            3.1415926535897932384626
+            unkwon
           </ListItemText>
         </ListItem>
+
         {categories.map(({ id, children }) => (
           <React.Fragment key={id}>
             <ListItem className={classes.categoryHeader}>
@@ -113,11 +141,12 @@ function Navigator(props: NavigatorProps) {
                 {id}
               </ListItemText>
             </ListItem>
-            {children.map(({ id: childId, icon, active }) => (
+            {children.map(({ id: childId, icon, active}) => (
               <ListItem
                 key={childId}
                 button
                 className={clsx(classes.item, active && classes.itemActiveItem)}
+                onClick = {() => setActive(childId) }
               >
                 <ListItemIcon className={classes.itemIcon}>{icon}</ListItemIcon>
                 <ListItemText

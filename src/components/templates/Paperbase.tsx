@@ -198,7 +198,7 @@ function Paperbase(props: PaperbaseProps) {
         <div className={classes.app}>
           <Header onDrawerToggle={handleDrawerToggle} />
           <main className={classes.main}>
-            <Content paper = "syokupanman"/>
+            <Content paper = ""/>
           </main>
           <footer className={classes.footer}>
             <Copyright />
