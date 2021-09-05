@@ -1,18 +1,12 @@
-import React from 'react';
-import {
-  createTheme,
-  createStyles,
-  ThemeProvider,
-  withStyles,
-  WithStyles,
-} from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Hidden from '@material-ui/core/Hidden';
-import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
-import Navigator from './Navigator';
-import Content from './Content';
-import Header from './Header';
+import React from 'react'
+import { createTheme, createStyles, ThemeProvider, withStyles, WithStyles } from '@material-ui/core/styles'
+import CssBaseline from '@material-ui/core/CssBaseline'
+import Hidden from '@material-ui/core/Hidden'
+import Typography from '@material-ui/core/Typography'
+import Link from '@material-ui/core/Link'
+import Navigator from './Navigator'
+import Content from './Content'
+import Header from './Header'
 
 function Copyright() {
   return (
@@ -24,7 +18,7 @@ function Copyright() {
       {new Date().getFullYear()}
       {'.'}
     </Typography>
-  );
+  )
 }
 
 let theme = createTheme({
@@ -55,7 +49,7 @@ let theme = createTheme({
       minHeight: 48,
     },
   },
-});
+})
 
 theme = {
   ...theme,
@@ -135,9 +129,9 @@ theme = {
       },
     },
   },
-};
+}
 
-const drawerWidth = 256;
+const drawerWidth = 256
 
 const styles = createStyles({
   root: {
@@ -164,19 +158,19 @@ const styles = createStyles({
     padding: theme.spacing(2),
     background: '#eaeff1',
   },
-});
+})
 
 export interface PaperbaseProps extends WithStyles<typeof styles> {
-  root:string
+  root: string
 }
 
 function Paperbase(props: PaperbaseProps) {
-  const { classes } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const { classes } = props
+  const [mobileOpen, setMobileOpen] = React.useState(false)
 
   const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
+    setMobileOpen(!mobileOpen)
+  }
 
   return (
     <ThemeProvider theme={theme}>
@@ -198,7 +192,7 @@ function Paperbase(props: PaperbaseProps) {
         <div className={classes.app}>
           <Header onDrawerToggle={handleDrawerToggle} />
           <main className={classes.main}>
-            <Content paper = ""/>
+            <Content paper="" />
           </main>
           <footer className={classes.footer}>
             <Copyright />
@@ -206,7 +200,7 @@ function Paperbase(props: PaperbaseProps) {
         </div>
       </div>
     </ThemeProvider>
-  );
+  )
 }
 
-export default withStyles(styles)(Paperbase);
+export default withStyles(styles)(Paperbase)
