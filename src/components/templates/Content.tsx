@@ -3,19 +3,19 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
-import Button from '@material-ui/core/Button'
+// import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
-import Tooltip from '@material-ui/core/Tooltip'
-import IconButton from '@material-ui/core/IconButton'
+// import Tooltip from '@material-ui/core/Tooltip'
+// import IconButton from '@material-ui/core/IconButton'
 import { createStyles, Theme, withStyles, WithStyles } from '@material-ui/core/styles'
-import SearchIcon from '@material-ui/icons/Search'
-import RefreshIcon from '@material-ui/icons/Refresh'
+// import SearchIcon from '@material-ui/icons/Search'
+// import RefreshIcon from '@material-ui/icons/Refresh'
 
 const styles = (theme: Theme) =>
   createStyles({
     paper: {
       maxWidth: 936,
-      margin: 'auto',
+      margin: '30px auto',
       overflow: 'hidden',
     },
     searchBar: {
@@ -47,20 +47,20 @@ function Content(props: ContentProps) {
       <AppBar className={classes.searchBar} position="static" color="default" elevation={0}>
         <Toolbar>
           <Grid container spacing={2} alignItems="center">
-            <Grid item>
+            {/* <Grid item>
               <SearchIcon className={classes.block} color="inherit" />
-            </Grid>
+            </Grid> */}
             <Grid item xs>
               <TextField
                 fullWidth
-                placeholder="Search by email address, phone number, or user UID"
+                placeholder="There are no topic now!"
                 InputProps={{
                   disableUnderline: true,
                   className: classes.searchInput,
                 }}
               />
             </Grid>
-            <Grid item>
+            {/* <Grid item>
               <Button variant="contained" color="primary" className={classes.addUser}>
                 Add user
               </Button>
@@ -69,13 +69,13 @@ function Content(props: ContentProps) {
                   <RefreshIcon className={classes.block} color="inherit" />
                 </IconButton>
               </Tooltip>
-            </Grid>
+            </Grid> */}
           </Grid>
         </Toolbar>
       </AppBar>
       <div className={classes.contentWrapper}>
         <Typography color="textSecondary" align="center">
-          No users for this project yet
+          There are no topic now!
         </Typography>
       </div>
     </Paper>

@@ -192,6 +192,11 @@ function Paperbase(props: PaperbaseProps) {
         <div className={classes.app}>
           <Header onDrawerToggle={handleDrawerToggle} />
           <main className={classes.main}>
+            <h1>Welcome to thirofoo_home!</h1>
+            <p>ここはT.hirotoのhomepageです！更新は遅いと思いますがこれからのんびりと発展させていきます！(at 9/5)</p>
+            <Content paper="" />
+            <Content paper="" />
+            <Content paper="" />
             <Content paper="" />
           </main>
           <footer className={classes.footer}>
