@@ -20,7 +20,7 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+        大翔(@through__TH)
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -32,7 +32,7 @@ let theme = createTheme({
   palette: {
     primary: {
       light: '#63ccff',
-      main: '#009be5',
+      main: '#009be1',
       dark: '#006db3',
     },
   },
@@ -63,7 +63,7 @@ theme = {
   overrides: {
     MuiDrawer: {
       paper: {
-        backgroundColor: '#18202c',
+        backgroundColor: '#292323a0',
       },
     },
     MuiButton: {
@@ -146,10 +146,11 @@ const styles = createStyles({
     minHeight: '100vh',
   },
   drawer: {
-    [theme.breakpoints.up('sm')]: {
-      width: drawerWidth,
-      flexShrink: 0,
-    },
+    // [theme.breakpoints.up('xl')]: {
+    // // [theme.breakpoints.up('sm')]: {
+    //   width: drawerWidth,
+    //   flexShrink: 0,
+    // },
   },
   app: {
     flex: 1,
@@ -185,7 +186,8 @@ function Paperbase(props: PaperbaseProps) {
         <div className={classes.root}>
           <CssBaseline />
           <nav className={classes.drawer}>
-            <Hidden smUp implementation="js">
+            <Hidden xsDown implementation="js">
+              {/* <Hidden smUp implementation="js"> ここはメニューボタンを押してメニューバーが開くかどうかを調節する部位 */}
               <Navigator
                 PaperProps={{ style: { width: drawerWidth } }}
                 variant="temporary"
@@ -193,7 +195,7 @@ function Paperbase(props: PaperbaseProps) {
                 onClose={handleDrawerToggle}
               />
             </Hidden>
-            <Hidden xsDown implementation="css">
+            <Hidden xlDown implementation="css">
               <Navigator PaperProps={{ style: { width: drawerWidth } }} />
             </Hidden>
           </nav>

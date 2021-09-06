@@ -6,16 +6,16 @@ import Grid from '@material-ui/core/Grid'
 import HelpIcon from '@material-ui/icons/Help'
 import Hidden from '@material-ui/core/Hidden'
 import IconButton from '@material-ui/core/IconButton'
-import Link from '@material-ui/core/Link'
+// import Link from '@material-ui/core/Link'
 import MenuIcon from '@material-ui/icons/Menu'
 import NotificationsIcon from '@material-ui/icons/Notifications'
-import Tab from '@material-ui/core/Tab'
+// import Tab from '@material-ui/core/Tab'
 import Tabs from '@material-ui/core/Tabs'
 import Toolbar from '@material-ui/core/Toolbar'
 import Tooltip from '@material-ui/core/Tooltip'
 import Typography from '@material-ui/core/Typography'
 import { createStyles, Theme, withStyles, WithStyles, createTheme } from '@material-ui/core/styles'
-import { useState } from 'react'
+// import { useState } from 'react'
 import { ThemeProvider } from '@material-ui/styles'
 
 const lightColor = 'rgba(255, 255, 255, 0.7)'
@@ -46,10 +46,10 @@ const styles = (theme: Theme) =>
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#c5cae9',
+      main: '#423d3db0',
     },
     secondary: {
-      main: '#121858',
+      main: '#423d3db0',
     },
   },
 })
@@ -61,7 +61,7 @@ interface HeaderProps extends WithStyles<typeof styles> {
 function Header_home(props: HeaderProps) {
   const { classes, onDrawerToggle } = props
 
-  const [isActivce, setIsActive] = useState(0)
+  // const [isActivce, setIsActive] = useState(0)
 
   return (
     <React.Fragment>
@@ -69,7 +69,8 @@ function Header_home(props: HeaderProps) {
         <AppBar color="secondary" position="sticky" elevation={0}>
           <Toolbar>
             <Grid container spacing={1} alignItems="center">
-              <Hidden smUp>
+              <Hidden>
+                {/* <Hidden smUp> ここはメニューバーが現れるタイミング*/}
                 <Grid item>
                   <IconButton
                     color="inherit"
@@ -83,9 +84,16 @@ function Header_home(props: HeaderProps) {
               </Hidden>
               <Grid item xs />
               <Grid item>
-                <Link className={classes.link} href="#" variant="body2">
-                  Recent Change
-                </Link>
+                <Button className={classes.button} variant="outlined" color="inherit" size="small">
+                  Question
+                </Button>
+              </Grid>
+              <Grid item>
+                <Tooltip title="Help">
+                  <IconButton color="inherit">
+                    <HelpIcon />
+                  </IconButton>
+                </Tooltip>
               </Grid>
               <Grid item>
                 <Tooltip title="Alerts • No alerts">
@@ -106,30 +114,36 @@ function Header_home(props: HeaderProps) {
           <Toolbar>
             <Grid container alignItems="center" spacing={1}>
               <Grid item xs>
-                <Typography color="inherit" variant="h5" component="h1" style={{ fontSize: '28px' }}>
+                <Typography
+                  color="inherit"
+                  variant="h5"
+                  component="h1"
+                  style={{
+                    fontSize: '35px',
+                    paddingBottom: '0px',
+                    borderBottom: '1px',
+                    textShadow: '1px 1px 2px #1a1a1ac7, 0 0 2em #000000, 0 0 0.2em #000000',
+                  }}
+                >
                   thirofoo_Home
                 </Typography>
-              </Grid>
-              <Grid item>
-                <Button className={classes.button} variant="outlined" color="inherit" size="small">
-                  Question
-                </Button>
-              </Grid>
-              <Grid item>
-                <Tooltip title="Help">
-                  <IconButton color="inherit">
-                    <HelpIcon />
-                  </IconButton>
-                </Tooltip>
               </Grid>
             </Grid>
           </Toolbar>
         </AppBar>
-        <AppBar component="div" className={classes.secondaryBar} color="primary" position="static" elevation={0}>
-          <Tabs value={isActivce} textColor="inherit">
-            <Tab textColor="inherit" label="Top" onClick={() => setIsActive(0)} />
+        <AppBar
+          component="div"
+          className={classes.secondaryBar}
+          color="primary"
+          position="static"
+          elevation={0}
+          style={{ textShadow: '-moz-initial' }}
+        >
+          <Tabs value={0} textColor="inherit">
+            {/* <Tabs value={isActivce} textColor="inherit"> */}
+            {/* <Tab textColor="inherit" label="Top" onClick={() => setIsActive(0)} />
             <Tab textColor="inherit" label="News" onClick={() => setIsActive(1)} />
-            <Tab textColor="inherit" label="others" onClick={() => setIsActive(2)} />
+            <Tab textColor="inherit" label="others" onClick={() => setIsActive(2)} /> */}
           </Tabs>
         </AppBar>
       </ThemeProvider>
