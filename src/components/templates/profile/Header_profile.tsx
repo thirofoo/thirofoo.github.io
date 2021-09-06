@@ -96,7 +96,7 @@ function Header_profile(props: HeaderProps) {
               </Grid>
               <Grid item>
                 <IconButton color="inherit" className={classes.iconButtonAvatar}>
-                  <Avatar src="./build/images/avatar/night.jpg" alt="Takahashi Hiroto" />
+                  <Avatar src="./night.jpg" alt="Takahashi Hiroto" />
                 </IconButton>
               </Grid>
             </Grid>
