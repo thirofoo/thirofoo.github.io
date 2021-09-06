@@ -9,7 +9,6 @@ import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import HomeIcon from '@material-ui/icons/Home'
-import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople'
 import DnsRoundedIcon from '@material-ui/icons/DnsRounded'
 import SettingsIcon from '@material-ui/icons/Settings'
 import { Omit } from '@material-ui/types'
@@ -17,7 +16,10 @@ import TwitterIcon from '@material-ui/icons/Twitter'
 import InstagramIcon from '@material-ui/icons/Instagram'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 // import { Category } from '@material-ui/icons';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle'
+import SchoolIcon from '@material-ui/icons/School'
 
 const styles = (theme: Theme) =>
   createStyles({
@@ -90,18 +92,18 @@ function Navigator(props: NavigatorProps) {
     {
       id: 'Detail',
       children: [
-        { id: 'Home', icon: <HomeIcon />, active: homeActive },
-        { id: 'Profile', icon: <EmojiPeopleIcon />, active: profileActive },
-        { id: 'Product', icon: <DnsRoundedIcon />, active: productActive },
-        { id: 'Config', icon: <SettingsIcon />, active: configActive },
+        { id: 'Home', icon: <HomeIcon />, active: homeActive, path: '/' },
+        { id: 'Profile', icon: <AccountCircleIcon />, active: profileActive, path: '/profile' },
+        { id: 'Product', icon: <DnsRoundedIcon />, active: productActive, path: '/product' },
+        { id: 'Config', icon: <SettingsIcon />, active: configActive, path: '/config' },
       ],
     },
     {
       id: 'Accounts',
       children: [
-        { id: 'Twitter', icon: <TwitterIcon />, active: false },
-        { id: 'Instagram', icon: <InstagramIcon />, active: false },
-        { id: 'Github', icon: <GitHubIcon />, active: false },
+        { id: 'Twitter', icon: <TwitterIcon />, active: false, path: '' },
+        { id: 'Instagram', icon: <InstagramIcon />, active: false, path: '' },
+        { id: 'Github', icon: <GitHubIcon />, active: false, path: '' },
       ],
     },
   ]
@@ -112,14 +114,14 @@ function Navigator(props: NavigatorProps) {
         <ListItem className={clsx(classes.firebase, classes.item, classes.itemCategory)}>T.Hiroto</ListItem>
         <ListItem className={clsx(classes.item, classes.itemCategory)}>
           <ListItemIcon className={classes.itemIcon}>
-            <HomeIcon />
+            <SchoolIcon />
           </ListItemIcon>
           <ListItemText
             classes={{
               primary: classes.itemPrimary,
             }}
           >
-            unkwon
+            Saitama.univ
           </ListItemText>
         </ListItem>
 
@@ -134,22 +136,24 @@ function Navigator(props: NavigatorProps) {
                 {id}
               </ListItemText>
             </ListItem>
-            {children.map(({ id: childId, icon, active }) => (
-              <ListItem
-                key={childId}
-                button
-                className={clsx(classes.item, active && classes.itemActiveItem)}
-                onClick={() => setActive(childId)}
-              >
-                <ListItemIcon className={classes.itemIcon}>{icon}</ListItemIcon>
-                <ListItemText
-                  classes={{
-                    primary: classes.itemPrimary,
-                  }}
+            {children.map(({ id: childId, icon, active, path }) => (
+              <Link to={path} style={{ textDecoration: 'none' }}>
+                <ListItem
+                  key={childId}
+                  button
+                  className={clsx(classes.item, active && classes.itemActiveItem)}
+                  onClick={() => setActive(childId)}
                 >
-                  {childId}
-                </ListItemText>
-              </ListItem>
+                  <ListItemIcon className={classes.itemIcon}>{icon}</ListItemIcon>
+                  <ListItemText
+                    classes={{
+                      primary: classes.itemPrimary,
+                    }}
+                  >
+                    {childId}
+                  </ListItemText>
+                </ListItem>
+              </Link>
             ))}
             <Divider className={classes.divider} />
           </React.Fragment>

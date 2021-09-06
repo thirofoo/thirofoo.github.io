@@ -58,7 +58,7 @@ interface HeaderProps extends WithStyles<typeof styles> {
   onDrawerToggle: () => void
 }
 
-function Header(props: HeaderProps) {
+function Header_product(props: HeaderProps) {
   const { classes, onDrawerToggle } = props
 
   const [isActivce, setIsActive] = useState(0)
@@ -106,7 +106,7 @@ function Header(props: HeaderProps) {
           <Toolbar>
             <Grid container alignItems="center" spacing={1}>
               <Grid item xs>
-                <Typography color="inherit" variant="h5" component="h1">
+                <Typography color="inherit" variant="h5" component="h1" style={{ fontSize: '28px' }}>
                   thirofoo_Home
                 </Typography>
               </Grid>
@@ -127,10 +127,8 @@ function Header(props: HeaderProps) {
         </AppBar>
         <AppBar component="div" className={classes.secondaryBar} color="primary" position="static" elevation={0}>
           <Tabs value={isActivce} textColor="inherit">
-            <Tab textColor="inherit" label="Basic" onClick={() => setIsActive(0)} />
-            <Tab textColor="inherit" label="Carrer" onClick={() => setIsActive(1)} />
-            <Tab textColor="inherit" label="Templates" onClick={() => setIsActive(2)} />
-            <Tab textColor="inherit" label="Usage" onClick={() => setIsActive(3)} />
+            <Tab textColor="inherit" label="Product" onClick={() => setIsActive(0)} />
+            <Tab textColor="inherit" label="Others" onClick={() => setIsActive(1)} />
           </Tabs>
         </AppBar>
       </ThemeProvider>
@@ -138,4 +136,4 @@ function Header(props: HeaderProps) {
   )
 }
 
-export default withStyles(styles)(Header)
+export default withStyles(styles)(Header_product)

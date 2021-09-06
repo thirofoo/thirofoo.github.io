@@ -39,7 +39,7 @@ export interface ContentProps extends WithStyles<typeof styles> {
   paper: string
 }
 
-function Content(props: ContentProps) {
+function Topic(props: ContentProps) {
   const { classes } = props
 
   return (
@@ -53,7 +53,7 @@ function Content(props: ContentProps) {
             <Grid item xs>
               <TextField
                 fullWidth
-                placeholder="There are no topic now!"
+                placeholder="記事は特にありません！"
                 InputProps={{
                   disableUnderline: true,
                   className: classes.searchInput,
@@ -82,4 +82,4 @@ function Content(props: ContentProps) {
   )
 }
 
-export default withStyles(styles)(Content)
+export default withStyles(styles)(Topic)

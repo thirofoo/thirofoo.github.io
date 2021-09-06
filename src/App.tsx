@@ -1,5 +1,5 @@
 import './App.css'
-import Paperbase from './components/templates/Paperbase'
+import Paperbase from './components/pages/Paperbase'
 
 const App: React.FC = () => {
   return (

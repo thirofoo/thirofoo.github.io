@@ -4,9 +4,16 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import Hidden from '@material-ui/core/Hidden'
 import Typography from '@material-ui/core/Typography'
 import Link from '@material-ui/core/Link'
-import Navigator from './Navigator'
-import Content from './Content'
-import Header from './Header'
+import Navigator from '../templates/Navigator'
+import Content_home from '../templates/home/Content_home'
+import Content_profile from '../templates/profile/Content_profile'
+import Content_product from '../templates/product/Content_product'
+import Content_config from '../templates/config/Content_config'
+import Header_home from '../templates/home/Header_home'
+import Header_profile from '../templates/profile/Header_profile'
+import Header_product from '../templates/product/Header_product'
+import Header_config from '../templates/config/Header_config'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 function Copyright() {
   return (
@@ -174,36 +181,40 @@ function Paperbase(props: PaperbaseProps) {
 
   return (
     <ThemeProvider theme={theme}>
-      <div className={classes.root}>
-        <CssBaseline />
-        <nav className={classes.drawer}>
-          <Hidden smUp implementation="js">
-            <Navigator
-              PaperProps={{ style: { width: drawerWidth } }}
-              variant="temporary"
-              open={mobileOpen}
-              onClose={handleDrawerToggle}
-            />
-          </Hidden>
-          <Hidden xsDown implementation="css">
-            <Navigator PaperProps={{ style: { width: drawerWidth } }} />
-          </Hidden>
-        </nav>
-        <div className={classes.app}>
-          <Header onDrawerToggle={handleDrawerToggle} />
-          <main className={classes.main}>
-            <h1>Welcome to thirofoo_home!</h1>
-            <p>ここはT.hirotoのhomepageです！更新は遅いと思いますがこれからのんびりと発展させていきます！(at 9/5)</p>
-            <Content paper="" />
-            <Content paper="" />
-            <Content paper="" />
-            <Content paper="" />
-          </main>
-          <footer className={classes.footer}>
-            <Copyright />
-          </footer>
+      <Router>
+        <div className={classes.root}>
+          <CssBaseline />
+          <nav className={classes.drawer}>
+            <Hidden smUp implementation="js">
+              <Navigator
+                PaperProps={{ style: { width: drawerWidth } }}
+                variant="temporary"
+                open={mobileOpen}
+                onClose={handleDrawerToggle}
+              />
+            </Hidden>
+            <Hidden xsDown implementation="css">
+              <Navigator PaperProps={{ style: { width: drawerWidth } }} />
+            </Hidden>
+          </nav>
+          <div className={classes.app}>
+            <Route exact path="/" render={() => <Header_home onDrawerToggle={handleDrawerToggle} />}></Route>
+            <Route path="/profile" render={() => <Header_profile onDrawerToggle={handleDrawerToggle} />}></Route>
+            <Route path="/product" render={() => <Header_product onDrawerToggle={handleDrawerToggle} />}></Route>
+            <Route path="/config" render={() => <Header_config onDrawerToggle={handleDrawerToggle} />}></Route>
+            {/* <Header onDrawerToggle={handleDrawerToggle} /> */}
+            <main className={classes.main}>
+              <Route exact path="/" component={Content_home} />
+              <Route path="/profile" component={Content_profile} />
+              <Route path="/product" component={Content_product} />
+              <Route path="/config" component={Content_config} />
+            </main>
+            <footer className={classes.footer}>
+              <Copyright />
+            </footer>
+          </div>
         </div>
-      </div>
+      </Router>
     </ThemeProvider>
   )
 }
