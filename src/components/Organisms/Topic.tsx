@@ -20,9 +20,11 @@ const styles = (theme: Theme) =>
     },
     searchBar: {
       borderBottom: '1px solid rgba(0, 0, 0, 0.12)',
+      backgroundColor: '#555555',
     },
     searchInput: {
       fontSize: theme.typography.fontSize,
+      color: 'white',
     },
     block: {
       display: 'block',

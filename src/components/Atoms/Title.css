@@ -1,0 +1,61 @@
+.fade{
+    text-align: center;
+    margin-top: 50px;
+    animation-name: fade;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    margin-top: 5vw;
+  }
+
+  h1{
+      font-size: 50px;
+  }
+
+  h2{
+    margin-bottom: 60vh;
+  }
+  
+  @keyframes fade{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+
+  .next {
+    position: absolute;
+    bottom: 15%;
+    left: calc(50% - 15px);
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 2px solid rgba(53, 48, 48, 0.605);
+    border-left: 2px solid rgba(53, 48, 48, 0.605);
+    animation: nextArrow 3000ms infinite;
+}
+
+
+@keyframes nextArrow {
+    0% {
+      opacity: 1;
+      transform: translateY(0) scale(1) rotate(-45deg);
+    }
+  
+    50% {
+      opacity: 0;
+      transform: translateY(10px) scale(1) rotate(-45deg);
+    }
+  
+    51% {
+      opacity: 0;
+      transform: translateY(-10px) scale(0.8) rotate(-45deg);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1) rotate(-45deg);
+    }
+  }
+  

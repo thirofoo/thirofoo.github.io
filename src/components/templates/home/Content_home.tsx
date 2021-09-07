@@ -9,7 +9,7 @@ const Content_home: React.FC = () => {
         top="Welecome to thirofoo_home!"
         discription="ここはT.hirotoのhomepageです！更新は遅いと思いますが、これからのんびりと発展させていきます！(at 9/5)"
       ></Title>
-      <div style={{ marginBottom: '300px' }}></div>
+
       <Topic paper=""></Topic>
       <Topic paper=""></Topic>
       <Topic paper=""></Topic>

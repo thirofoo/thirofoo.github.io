@@ -1,7 +1,7 @@
 import React from 'react'
 import { createTheme, createStyles, ThemeProvider, withStyles, WithStyles } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
-import Hidden from '@material-ui/core/Hidden'
+// import Hidden from '@material-ui/core/Hidden'
 import Typography from '@material-ui/core/Typography'
 import Link from '@material-ui/core/Link'
 import Navigator from '../templates/Navigator'
@@ -186,18 +186,18 @@ function Paperbase(props: PaperbaseProps) {
         <div className={classes.root}>
           <CssBaseline />
           <nav className={classes.drawer}>
-            <Hidden xsDown implementation="js">
-              {/* <Hidden smUp implementation="js"> ここはメニューボタンを押してメニューバーが開くかどうかを調節する部位 */}
-              <Navigator
-                PaperProps={{ style: { width: drawerWidth } }}
-                variant="temporary"
-                open={mobileOpen}
-                onClose={handleDrawerToggle}
-              />
-            </Hidden>
-            <Hidden xlDown implementation="css">
+            {/* <Hidden xlUp implementation="js"> */}
+            {/* <Hidden smUp implementation="js"> ここはメニューボタンを押してメニューバーが開くかどうかを調節する部位 */}
+            <Navigator
+              PaperProps={{ style: { width: drawerWidth } }}
+              variant="temporary"
+              open={mobileOpen}
+              onClose={handleDrawerToggle}
+            />
+            {/* </Hidden> */}
+            {/* <Hidden xlDown implementation="css">
               <Navigator PaperProps={{ style: { width: drawerWidth } }} />
-            </Hidden>
+            </Hidden> */}
           </nav>
           <div className={classes.app}>
             <Route exact path="/" render={() => <Header_home onDrawerToggle={handleDrawerToggle} />}></Route>
