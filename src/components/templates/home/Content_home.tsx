@@ -7,7 +7,7 @@ const Content_home: React.FC = () => {
     <React.Fragment>
       <Title
         top="Welecome to thirofoo_home!"
-        discription="ここはT.hirotoのhomepageです！更新は遅いと思いますが、これからのんびりと発展させていきます！(at 9/5)"
+        discription="ここはT.hirotoのhomepageです！更新は遅いですが、これからのんびりと発展させていきます！(at 9/5)"
       ></Title>
 
       <Topic paper=""></Topic>
