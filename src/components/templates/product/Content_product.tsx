@@ -6,8 +6,10 @@ const Content_profile: React.FC = () => {
   return (
     <React.Fragment>
       <Title top="Product" discription="ここでは今までで作ってきたweb系のものをを書き連ねていく予定です！"></Title>
-      <Topic paper=""></Topic>
-      <Topic paper=""></Topic>
+      <Topic smallTitle="トイソルジャーと申します！" content="ようこそ！夢と希望の町へ！あいたた！"></Topic>
+      <Topic smallTitle="トイソルジャーと申します！" content="ようこそ！夢と希望の町へ！あいたた！"></Topic>
+      <Topic smallTitle="トイソルジャーと申します！" content="ようこそ！夢と希望の町へ！あいたた！"></Topic>
+      <Topic smallTitle="トイソルジャーと申します！" content="ようこそ！夢と希望の町へ！あいたた！"></Topic>
     </React.Fragment>
   )
 }

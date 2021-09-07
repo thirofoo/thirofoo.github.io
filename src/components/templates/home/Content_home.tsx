@@ -7,12 +7,19 @@ const Content_home: React.FC = () => {
     <React.Fragment>
       <Title
         top="Welecome to thirofoo_home!"
-        discription="ここはT.hirotoのhomepageです！更新は遅いですが、これからのんびりと発展させていきます！(at 9/5)"
+        discription="ここはT.hirotoのhomepageです！これからのんびりと発展させていきます！(at 9/5)"
       ></Title>
 
-      <Topic paper=""></Topic>
-      <Topic paper=""></Topic>
-      <Topic paper=""></Topic>
+      <div style={{ display: 'inline', float: 'left' }}>
+        <Topic smallTitle="トイソルジャーと申します！" content="ようこそ！夢と希望の町へ！あいたた！"></Topic>
+        <Topic smallTitle="トイソルジャーと申します！" content="ようこそ！夢と希望の町へ！あいたた！"></Topic>
+        <Topic smallTitle="トイソルジャーと申します！" content="ようこそ！夢と希望の町へ！あいたた！"></Topic>
+        <Topic smallTitle="トイソルジャーと申します！" content="ようこそ！夢と希望の町へ！あいたた！"></Topic>
+        <Topic smallTitle="トイソルジャーと申します！" content="ようこそ！夢と希望の町へ！あいたた！"></Topic>
+        <Topic smallTitle="トイソルジャーと申します！" content="ようこそ！夢と希望の町へ！あいたた！"></Topic>
+        <Topic smallTitle="トイソルジャーと申します！" content="ようこそ！夢と希望の町へ！あいたた！"></Topic>
+        <Topic smallTitle="トイソルジャーと申します！" content="ようこそ！夢と希望の町へ！あいたた！"></Topic>
+      </div>
     </React.Fragment>
   )
 }

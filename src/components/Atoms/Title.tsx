@@ -11,8 +11,8 @@ const Title: React.FC<Props> = ({ top, discription }) => {
     <React.Fragment>
       <div className="fade">
         <h1 className="title">{top} </h1>
-        <p> {discription}</p>
-        <h2>近日公開...</h2>
+        <p className="little"> {discription}</p>
+        <h2 className="little">近日公開...</h2>
         <span className="next"></span>
       </div>
     </React.Fragment>

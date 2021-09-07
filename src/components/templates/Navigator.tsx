@@ -55,9 +55,10 @@ const styles = (theme: Theme) =>
     },
     iconButtonAvatar: {
       padding: 4,
+      right: '5px',
     },
     itemActiveItem: {
-      color: '#1a1616',
+      color: '#322121f1',
     },
     itemPrimary: {
       fontSize: 'inherit',
@@ -131,7 +132,7 @@ function Navigator(props: NavigatorProps) {
               <IconButton
                 color="inherit"
                 style={{
-                  left: '30px',
+                  left: '50px',
                 }}
               >
                 <HelpIcon />
@@ -148,7 +149,9 @@ function Navigator(props: NavigatorProps) {
               primary: classes.itemPrimary,
             }}
           >
-            Saitama.univ
+            <a href="http://www.saitama-u.ac.jp/" style={{ color: 'white', textDecoration: 'none' }}>
+              Saitama.univ
+            </a>
           </ListItemText>
         </ListItem>
 

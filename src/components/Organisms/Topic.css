@@ -1,0 +1,27 @@
+  .container{
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    margin: 20px;
+    border: 1px 1px 1px black;
+  }
+
+  .smallTitle{
+    display:block;
+    width: 250px;
+    height: 50px;
+    padding: 10px 10px 0px 10px;
+    background-color: #727272;
+    box-shadow: 2px 2px 2px black;
+    color: white;
+    backdrop-filter: blur(20px);
+  }
+
+  .topic{
+    display:block;
+    width: 250px;
+    height: 200px;
+    padding: 10px;
+    border: 1px 1px 1px black;
+    box-shadow: 2px 2px 2px black;
+  }

@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  overflow: hidden;
 }
 
 .App-logo {
@@ -11,6 +12,30 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.thirofoo_home{
+  animation-name: move;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-duration: 20s;
+  transform: translate(-100%,0);
+}
+
+@keyframes move {
+  0%{
+    transform: translate(-100%,0);
+  }
+  20%{
+    transform: translate(0,0);
+  }
+  80%{
+    transform: translate(0,0);
+  }
+  100%{
+    transform: translate(100%,0);
+  }
+  
 }
 
 .App-header {
@@ -26,7 +51,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #e9dedcbb;
 }
 
 @keyframes App-logo-spin {

@@ -1,9 +1,7 @@
 .fade{
     text-align: center;
-    animation-name: fade;
-    animation-duration: 3s;
-    animation-iteration-count: 1;
-    margin-top: calc(35vh - 160px);
+    margin-top: calc(35vh - 150px);
+    padding: 10px;
   }
 
   .title{
@@ -11,6 +9,9 @@
     display: inline-block;
     font-size: 40px;
     padding-bottom: 5px;
+    animation-name: fade;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
   }
 
   .title::after{
@@ -28,9 +29,26 @@
     transform: scale(1.1, 1);
   }
 
-  /* .title:hover::after {
-    transform: scale(1, 1);
-  } */
+  .title::before{
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -5px;
+    left: -2px;
+    content: '';
+    animation-name: underline2;
+    animation-duration: 3s;
+    animation-delay: 7s;
+    animation-iteration-count: infinite;
+    border-bottom: 3px solid #eaeff1;
+    transform: translate(-100%, 0), scale(1.1, 1);
+  }
+
+ .little{
+   animation: fade2;
+   animation-duration: 5s;
+   animation-iteration-count: 1;
+ }
 
   h2{
     margin-bottom: 43vh;
@@ -55,8 +73,43 @@
     }
   }
 
+  @keyframes underline2{
+    0%{
+      border-bottom: 3px solid #eaeff1;
+      transform: scale(1.1, 1);
+      transform: translate(-100%, 0);
+    }
+    30%{
+      border-bottom: 3px solid #eaeff1;
+      transform: scale(1.1, 1);
+      transform: translate(0%, 0);
+    }
+    60%{
+      border-bottom: 3px solid #eaeff1;
+      transform: scale(1.1, 1);
+      transform: translate(0%, 0);
+    }
+    90%{
+      border-bottom: 3px solid #eaeff1;
+      transform: scale(1.1, 1);
+      transform: translate(-100%, 0);
+    }
+  }
+
   @keyframes fade{
     0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade2{
+    0%{
+      opacity: 0;
+    }
+    20%{
       opacity: 0;
     }
     100%{

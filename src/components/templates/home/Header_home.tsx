@@ -46,10 +46,10 @@ const styles = (theme: Theme) =>
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#423d3db0',
+      main: '#534a45b0',
     },
     secondary: {
-      main: '#423d3db0',
+      main: '#534a45b0',
     },
   },
 })
@@ -107,7 +107,9 @@ function Header_home(props: HeaderProps) {
                   color="inherit"
                   variant="h5"
                   component="h1"
+                  className="thirofoo_home"
                   style={{
+                    backgroundColor: '##fafafa',
                     fontSize: '35px',
                     paddingBottom: '0px',
                     textShadow: '1px 1px 2px #1a1a1ac7, 0 0 2em #000000, 0 0 0.2em #000000',

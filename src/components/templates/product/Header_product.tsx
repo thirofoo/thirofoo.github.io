@@ -125,7 +125,10 @@ function Header_home(props: HeaderProps) {
           color="primary"
           position="static"
           elevation={0}
-          style={{ textShadow: '-moz-initial' }}
+          style={{
+            textShadow: '1px 1px 1px black',
+            border: '1px 1px 1px black',
+          }}
         >
           <Tabs value={isActivce} textColor="inherit">
             <Tab textColor="inherit" label="Product" onClick={() => setIsActive(0)} />
