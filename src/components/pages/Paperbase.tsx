@@ -161,6 +161,7 @@ const styles = createStyles({
     flex: 1,
     padding: theme.spacing(6, 4),
     background: '#eaeff1',
+    paddingTop: 0,
   },
   footer: {
     padding: theme.spacing(2),
@@ -205,7 +206,12 @@ function Paperbase(props: PaperbaseProps) {
             <Route path="/product" render={() => <Header_product onDrawerToggle={handleDrawerToggle} />}></Route>
             <Route path="/config" render={() => <Header_config onDrawerToggle={handleDrawerToggle} />}></Route>
             {/* <Header onDrawerToggle={handleDrawerToggle} /> */}
-            <main className={classes.main}>
+            <main
+              className={classes.main}
+              style={{
+                boxShadow: '2px 2px 20px black',
+              }}
+            >
               <Route exact path="/" component={Content_home} />
               <Route path="/profile" component={Content_profile} />
               <Route path="/product" component={Content_product} />

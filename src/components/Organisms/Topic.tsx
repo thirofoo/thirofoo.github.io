@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography'
 import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
 // import Button from '@material-ui/core/Button'
-import TextField from '@material-ui/core/TextField'
+// import TextField from '@material-ui/core/TextField'
 // import Tooltip from '@material-ui/core/Tooltip'
 // import IconButton from '@material-ui/core/IconButton'
 import { createStyles, Theme, withStyles, WithStyles } from '@material-ui/core/styles'
@@ -22,7 +22,7 @@ const styles = (theme: Theme) =>
       borderBottom: '1px solid rgba(0, 0, 0, 0.12)',
       backgroundColor: '#555555',
     },
-    searchInput: {
+    title: {
       fontSize: theme.typography.fontSize,
       color: 'white',
     },
@@ -53,14 +53,9 @@ function Topic(props: ContentProps) {
               <SearchIcon className={classes.block} color="inherit" />
             </Grid> */}
             <Grid item xs>
-              <TextField
-                fullWidth
-                placeholder="記事は特にありません！"
-                InputProps={{
-                  disableUnderline: true,
-                  className: classes.searchInput,
-                }}
-              />
+              <Typography color="textSecondary" align="center" className={classes.title}>
+                There are no topic now!
+              </Typography>
             </Grid>
             {/* <Grid item>
               <Button variant="contained" color="primary" className={classes.addUser}>

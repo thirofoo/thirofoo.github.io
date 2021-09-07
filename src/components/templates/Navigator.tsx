@@ -20,6 +20,11 @@ import { Link } from 'react-router-dom'
 // import { Category } from '@material-ui/icons';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle'
 import SchoolIcon from '@material-ui/icons/School'
+import { IconButton } from '@material-ui/core'
+import { Avatar } from '@material-ui/core'
+import { Tooltip } from '@material-ui/core'
+import HelpIcon from '@material-ui/icons/Help'
+import Grid from '@material-ui/core/Grid'
 
 const styles = (theme: Theme) =>
   createStyles({
@@ -47,6 +52,9 @@ const styles = (theme: Theme) =>
     firebase: {
       fontSize: 24,
       color: theme.palette.common.white,
+    },
+    iconButtonAvatar: {
+      padding: 4,
     },
     itemActiveItem: {
       color: '#1a1616',
@@ -111,7 +119,26 @@ function Navigator(props: NavigatorProps) {
   return (
     <Drawer variant="permanent" {...other}>
       <List disablePadding>
-        <ListItem className={clsx(classes.firebase, classes.item, classes.itemCategory)}>T.Hiroto</ListItem>
+        <ListItem className={clsx(classes.firebase, classes.item, classes.itemCategory)}>
+          <Grid item>
+            <IconButton color="inherit" className={classes.iconButtonAvatar}>
+              <Avatar src="./night.jpg" alt="Takahashi Hiroto" />
+            </IconButton>
+          </Grid>
+          T.Hiroto
+          <Grid item>
+            <Tooltip title="Help">
+              <IconButton
+                color="inherit"
+                style={{
+                  left: '30px',
+                }}
+              >
+                <HelpIcon />
+              </IconButton>
+            </Tooltip>
+          </Grid>
+        </ListItem>
         <ListItem className={clsx(classes.item, classes.itemCategory)}>
           <ListItemIcon className={classes.itemIcon}>
             <SchoolIcon />

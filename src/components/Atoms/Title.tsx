@@ -10,7 +10,7 @@ const Title: React.FC<Props> = ({ top, discription }) => {
   return (
     <React.Fragment>
       <div className="fade">
-        <h1>{top}</h1>
+        <h1 className="title">{top} </h1>
         <p> {discription}</p>
         <h2>近日公開...</h2>
         <span className="next"></span>

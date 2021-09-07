@@ -1,9 +1,9 @@
 import React from 'react'
 import AppBar from '@material-ui/core/AppBar'
-import Avatar from '@material-ui/core/Avatar'
+// import Avatar from '@material-ui/core/Avatar'
 import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
-import HelpIcon from '@material-ui/icons/Help'
+// import HelpIcon from '@material-ui/icons/Help'
 // import Hidden from '@material-ui/core/Hidden'
 import IconButton from '@material-ui/core/IconButton'
 // import Link from '@material-ui/core/Link'
@@ -88,24 +88,13 @@ function Header_home(props: HeaderProps) {
                   Question
                 </Button>
               </Grid>
-              <Grid item>
-                <Tooltip title="Help">
-                  <IconButton color="inherit">
-                    <HelpIcon />
-                  </IconButton>
-                </Tooltip>
-              </Grid>
+
               <Grid item>
                 <Tooltip title="Alerts • No alerts">
                   <IconButton color="inherit">
                     <NotificationsIcon />
                   </IconButton>
                 </Tooltip>
-              </Grid>
-              <Grid item>
-                <IconButton color="inherit" className={classes.iconButtonAvatar}>
-                  <Avatar src="./night.jpg" alt="Takahashi Hiroto" />
-                </IconButton>
               </Grid>
             </Grid>
           </Toolbar>
@@ -121,7 +110,6 @@ function Header_home(props: HeaderProps) {
                   style={{
                     fontSize: '35px',
                     paddingBottom: '0px',
-                    borderBottom: '1px',
                     textShadow: '1px 1px 2px #1a1a1ac7, 0 0 2em #000000, 0 0 0.2em #000000',
                   }}
                 >

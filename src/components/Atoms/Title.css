@@ -1,20 +1,60 @@
 .fade{
     text-align: center;
-    margin-top: 50px;
     animation-name: fade;
-    animation-duration: 4s;
+    animation-duration: 3s;
     animation-iteration-count: 1;
-    margin-top: 5vw;
+    margin-top: calc(35vh - 160px);
   }
 
-  h1{
-      font-size: 45px;
+  .title{
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    padding-bottom: 5px;
   }
+
+  .title::after{
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -5px;
+    left: -2px;
+    content: '';
+    animation-name: underline;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    transition-duration: 3s;
+    border-bottom: 3px solid rgba(148, 131, 131, 0.664);
+    transform: scale(1.1, 1);
+  }
+
+  /* .title:hover::after {
+    transform: scale(1, 1);
+  } */
 
   h2{
-    margin-bottom: 60vh;
+    margin-bottom: 43vh;
+  }
+
+  p{
+    margin-top: 20px;
   }
   
+  @keyframes underline{
+    0%{
+      border-bottom: 3px solid rgba(148, 131, 131, 0.664);
+      transform: scale(0, 1);
+    }
+    30%{
+      border-bottom: 3px solid rgba(148, 131, 131, 0.664);
+      transform: scale(0, 1);
+    }
+    100%{
+      border-bottom: 3px solid rgba(148, 131, 131, 0.664);
+      transform: scale(1.1, 1);
+    }
+  }
+
   @keyframes fade{
     0%{
       opacity: 0;
@@ -31,8 +71,8 @@
     display: block;
     width: 30px;
     height: 30px;
-    border-bottom: 2px solid rgba(53, 48, 48, 0.605);
-    border-left: 2px solid rgba(53, 48, 48, 0.605);
+    border-bottom: 2px solid rgba(53, 48, 48, 0.805);
+    border-left: 2px solid rgba(53, 48, 48, 0.805);
     animation: nextArrow 3000ms infinite;
 }
 
