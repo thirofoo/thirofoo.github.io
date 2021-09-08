@@ -12,7 +12,7 @@
     "index.html": "/index.html",
     "static/css/main.6651b56e.chunk.css.map": "/static/css/main.6651b56e.chunk.css.map",
     "static/js/2.f7258d96.chunk.js.LICENSE.txt": "/static/js/2.f7258d96.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/static/media/back.8a43d639.jpg"
+    "static/media/App.css": "../back.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.cb44094b.js",
