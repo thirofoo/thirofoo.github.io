@@ -83,11 +83,11 @@ function Header_home(props: HeaderProps) {
               </Grid>
               {/* </Hidden> */}
               <Grid item xs />
-              <Grid item>
+              {/* <Grid item>
                 <Button className={classes.button} variant="outlined" color="inherit" size="small">
                   Question
                 </Button>
-              </Grid>
+              </Grid> */}
 
               <Grid item>
                 <Tooltip title="Alerts • No alerts">
@@ -109,10 +109,12 @@ function Header_home(props: HeaderProps) {
                   component="h1"
                   className="thirofoo_home"
                   style={{
+                    overflow: 'hidden',
+                    marginBottom: '30px',
                     backgroundColor: '##fafafa',
                     fontSize: '35px',
                     paddingBottom: '0px',
-                    textShadow: '1px 1px 2px #1a1a1ac7, 0 0 2em #000000, 0 0 0.2em #000000',
+                    textShadow: '1px 1px 2px #1a1a1ac7',
                   }}
                 >
                   thirofoo_Home
@@ -129,12 +131,12 @@ function Header_home(props: HeaderProps) {
           elevation={0}
           style={{ textShadow: '-moz-initial' }}
         >
-          <Tabs value={0} textColor="inherit">
-            {/* <Tabs value={isActivce} textColor="inherit"> */}
-            {/* <Tab textColor="inherit" label="Top" onClick={() => setIsActive(0)} />
+          {/* <Tabs value={0} textColor="inherit">
+            <Tabs value={isActivce} textColor="inherit">
+            <Tab textColor="inherit" label="Top" onClick={() => setIsActive(0)} />
             <Tab textColor="inherit" label="News" onClick={() => setIsActive(1)} />
-            <Tab textColor="inherit" label="others" onClick={() => setIsActive(2)} /> */}
-          </Tabs>
+            <Tab textColor="inherit" label="others" onClick={() => setIsActive(2)} />
+          </Tabs> */}
         </AppBar>
       </ThemeProvider>
     </React.Fragment>

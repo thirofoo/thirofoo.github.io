@@ -46,10 +46,10 @@ const styles = (theme: Theme) =>
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#423d3db0',
+      main: '#534a45b0',
     },
     secondary: {
-      main: '#423d3db0',
+      main: '#534a45b0',
     },
   },
 })
@@ -69,25 +69,25 @@ function Header_home(props: HeaderProps) {
         <AppBar color="secondary" position="sticky" elevation={0}>
           <Toolbar>
             <Grid container spacing={1} alignItems="center">
-              <Hidden>
-                {/* <Hidden smUp> ここはメニューバーが現れるタイミング*/}
-                <Grid item>
-                  <IconButton
-                    color="inherit"
-                    aria-label="open drawer"
-                    onClick={onDrawerToggle}
-                    className={classes.menuButton}
-                  >
-                    <MenuIcon />
-                  </IconButton>
-                </Grid>
-              </Hidden>
-              <Grid item xs />
+              {/* <Hidden xlUp> */}
+              {/* <Hidden smUp> ここはメニューバーが現れるタイミング*/}
               <Grid item>
+                <IconButton
+                  color="inherit"
+                  aria-label="open drawer"
+                  onClick={onDrawerToggle}
+                  className={classes.menuButton}
+                >
+                  <MenuIcon />
+                </IconButton>
+              </Grid>
+              {/* </Hidden> */}
+              <Grid item xs />
+              {/* <Grid item>
                 <Button className={classes.button} variant="outlined" color="inherit" size="small">
                   Question
                 </Button>
-              </Grid>
+              </Grid> */}
 
               <Grid item>
                 <Tooltip title="Alerts • No alerts">
@@ -107,7 +107,10 @@ function Header_home(props: HeaderProps) {
                   color="inherit"
                   variant="h5"
                   component="h1"
+                  className="home"
                   style={{
+                    marginBottom: '30px',
+                    backgroundColor: '##fafafa',
                     fontSize: '35px',
                     paddingBottom: '0px',
                     textShadow: '1px 1px 2px #1a1a1ac7, 0 0 2em #000000, 0 0 0.2em #000000',
@@ -127,10 +130,12 @@ function Header_home(props: HeaderProps) {
           elevation={0}
           style={{ textShadow: '-moz-initial' }}
         >
-          <Tabs value={isActivce} textColor="inherit">
-            <Tab textColor="inherit" label="Main" onClick={() => setIsActive(0)} />
-            <Tab textColor="inherit" label="Others" onClick={() => setIsActive(1)} />
-          </Tabs>
+          {/* <Tabs value={0} textColor="inherit">
+            <Tabs value={isActivce} textColor="inherit">
+            <Tab textColor="inherit" label="Top" onClick={() => setIsActive(0)} />
+            <Tab textColor="inherit" label="News" onClick={() => setIsActive(1)} />
+            <Tab textColor="inherit" label="others" onClick={() => setIsActive(2)} />
+          </Tabs> */}
         </AppBar>
       </ThemeProvider>
     </React.Fragment>

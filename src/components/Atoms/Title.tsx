@@ -9,12 +9,14 @@ type Props = {
 const Title: React.FC<Props> = ({ top, discription }) => {
   return (
     <React.Fragment>
-      <div className="fade">
-        <h1 className="title">{top} </h1>
-        <p className="little"> {discription}</p>
-        <h2 className="little">近日公開...</h2>
-        <span className="next"></span>
+      <div className="position">
+        <div className="top">
+          <h1 className="title">{top} </h1>
+          <p className="little"> {discription}</p>
+          <h2 className="little under">近日公開...</h2>
+        </div>
       </div>
+      <span className="next"></span>
     </React.Fragment>
   )
 }

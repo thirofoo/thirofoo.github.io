@@ -6,10 +6,10 @@ const Content_product: React.FC = () => {
   return (
     <React.Fragment>
       <Title top="Profile" discription="ここでは自己紹介的なことを書き連ねていく予定です！"></Title>
-      <Topic smallTitle="トイソルジャーと申します！" content="ようこそ！夢と希望の町へ！あいたた！"></Topic>
-      <Topic smallTitle="トイソルジャーと申します！" content="ようこそ！夢と希望の町へ！あいたた！"></Topic>
-      <Topic smallTitle="トイソルジャーと申します！" content="ようこそ！夢と希望の町へ！あいたた！"></Topic>
-      <Topic smallTitle="トイソルジャーと申します！" content="ようこそ！夢と希望の町へ！あいたた！"></Topic>
+      <Topic smallTitle="There is no topic now!" content="Coming soon..."></Topic>
+      <Topic smallTitle="There is no topic now!" content="Coming soon..."></Topic>
+      <Topic smallTitle="There is no topic now!" content="Coming soon..."></Topic>
+      <Topic smallTitle="There is no topic now!" content="Coming soon..."></Topic>
     </React.Fragment>
   )
 }

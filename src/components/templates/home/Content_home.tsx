@@ -10,15 +10,16 @@ const Content_home: React.FC = () => {
         discription="ここはT.hirotoのhomepageです！これからのんびりと発展させていきます！(at 9/5)"
       ></Title>
 
-      <div style={{ display: 'inline', float: 'left' }}>
-        <Topic smallTitle="トイソルジャーと申します！" content="ようこそ！夢と希望の町へ！あいたた！"></Topic>
-        <Topic smallTitle="トイソルジャーと申します！" content="ようこそ！夢と希望の町へ！あいたた！"></Topic>
-        <Topic smallTitle="トイソルジャーと申します！" content="ようこそ！夢と希望の町へ！あいたた！"></Topic>
-        <Topic smallTitle="トイソルジャーと申します！" content="ようこそ！夢と希望の町へ！あいたた！"></Topic>
-        <Topic smallTitle="トイソルジャーと申します！" content="ようこそ！夢と希望の町へ！あいたた！"></Topic>
-        <Topic smallTitle="トイソルジャーと申します！" content="ようこそ！夢と希望の町へ！あいたた！"></Topic>
-        <Topic smallTitle="トイソルジャーと申します！" content="ようこそ！夢と希望の町へ！あいたた！"></Topic>
-        <Topic smallTitle="トイソルジャーと申します！" content="ようこそ！夢と希望の町へ！あいたた！"></Topic>
+      <div>
+        <h2 style={{ fontSize: '40px', marginTop: '38vh' }} className="title">
+          main topic
+        </h2>
+        <div style={{ display: 'inline', float: 'left' }}>
+          <Topic smallTitle="There is no topic now!" content="Coming soon..."></Topic>
+          <Topic smallTitle="There is no topic now!" content="Coming soon..."></Topic>
+          <Topic smallTitle="There is no topic now!" content="Coming soon..."></Topic>
+          <Topic smallTitle="There is no topic now!" content="Coming soon..."></Topic>
+        </div>
       </div>
     </React.Fragment>
   )

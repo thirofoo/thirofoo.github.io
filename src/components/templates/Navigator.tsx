@@ -123,7 +123,7 @@ function Navigator(props: NavigatorProps) {
         <ListItem className={clsx(classes.firebase, classes.item, classes.itemCategory)}>
           <Grid item>
             <IconButton color="inherit" className={classes.iconButtonAvatar}>
-              <Avatar src="./night.jpg" alt="Takahashi Hiroto" />
+              <Avatar src="../../img/night.jpg" alt="Takahashi Hiroto" />
             </IconButton>
           </Grid>
           T.Hiroto

@@ -63,7 +63,7 @@ theme = {
   overrides: {
     MuiDrawer: {
       paper: {
-        backgroundColor: '#454545a0',
+        backgroundColor: '#00000050',
       },
     },
     MuiButton: {
@@ -159,8 +159,8 @@ const styles = createStyles({
   },
   main: {
     flex: 1,
-    padding: theme.spacing(6, 4),
-    background: '#eaeff1',
+    // padding: theme.spacing(6, 4),
+    background: '#ffffffaa',
     paddingTop: 0,
   },
   footer: {
@@ -184,7 +184,7 @@ function Paperbase(props: PaperbaseProps) {
   return (
     <ThemeProvider theme={theme}>
       <Router>
-        <div className={classes.root}>
+        <div className="root">
           <CssBaseline />
           <nav className={classes.drawer}>
             {/* <Hidden xlUp implementation="js"> */}
@@ -209,7 +209,8 @@ function Paperbase(props: PaperbaseProps) {
             <main
               className={classes.main}
               style={{
-                boxShadow: '2px 2px 20px black',
+                boxShadow: '0px 0px 20px 0px black',
+                overflow: 'hidden',
               }}
             >
               <Route exact path="/" component={Content_home} />

@@ -21,10 +21,10 @@ type Props = {
 const Topic: React.FC<Props> = ({ smallTitle, content }) => {
   return (
     <div className="container">
-      <Typography color="textSecondary" align="center" className="smallTitle">
+      <Typography align="center" className="smallTitle">
         {smallTitle}
       </Typography>
-      <Typography color="textSecondary" align="center" className="topic">
+      <Typography align="center" className="topic">
         {content}
       </Typography>
     </div>

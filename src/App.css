@@ -1,11 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Glory&display=swap');
+
 .App {
   text-align: center;
-  overflow: hidden;
+}
+
+.root::-webkit-scrollbar {
+  display: none;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  overflow: hidden;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -17,19 +23,25 @@
 .thirofoo_home{
   animation-name: move;
   animation-iteration-count: infinite;
-  animation-delay: 0s;
-  animation-duration: 20s;
+  animation-duration: 40s;
+  animation-delay: 4s;
   transform: translate(-100%,0);
+  font-family: 'Glory', sans-serif;
+  overflow: hidden;
+}
+
+.home{
+  font-family: 'Glory', sans-serif;
 }
 
 @keyframes move {
   0%{
     transform: translate(-100%,0);
   }
-  20%{
+  10%{
     transform: translate(0,0);
   }
-  80%{
+  92%{
     transform: translate(0,0);
   }
   100%{
@@ -51,7 +63,7 @@
 }
 
 .App-link {
-  color: #e9dedcbb;
+  color: #ffffff00;
 }
 
 @keyframes App-logo-spin {
@@ -61,4 +73,14 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.root{
+    text-align: center;
+    background-image: url(./img/back.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    background-repeat: repeat;
+    background-attachment: fixed;
 }
