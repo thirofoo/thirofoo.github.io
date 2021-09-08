@@ -25,7 +25,7 @@
   animation-iteration-count: infinite;
   animation-duration: 40s;
   animation-delay: 4s;
-  transform: translate(-100%,0);
+  transform: translate(0,0);
   font-family: 'Glory', sans-serif;
   overflow: hidden;
 }
@@ -33,7 +33,7 @@
 .home{
   font-family: 'Glory', sans-serif;
 }
-
+/* 
 @keyframes move {
   0%{
     transform: translate(-100%,0);
@@ -47,8 +47,7 @@
   100%{
     transform: translate(100%,0);
   }
-  
-}
+} */
 
 .App-header {
   background-color: #282c34;

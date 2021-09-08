@@ -19,6 +19,8 @@ const Content_home: React.FC = () => {
           <Topic smallTitle="There is no topic now!" content="Coming soon..."></Topic>
           <Topic smallTitle="There is no topic now!" content="Coming soon..."></Topic>
           <Topic smallTitle="There is no topic now!" content="Coming soon..."></Topic>
+          <Topic smallTitle="There is no topic now!" content="Coming soon..."></Topic>
+          <Topic smallTitle="There is no topic now!" content="Coming soon..."></Topic>
         </div>
       </div>
     </React.Fragment>
