@@ -107,13 +107,14 @@ function Header_home(props: HeaderProps) {
                   color="inherit"
                   variant="h5"
                   component="h1"
-                  className="home"
+                  className="thirofoo_home"
                   style={{
+                    overflow: 'hidden',
                     marginBottom: '30px',
                     backgroundColor: '##fafafa',
                     fontSize: '35px',
                     paddingBottom: '0px',
-                    textShadow: '1px 1px 2px #1a1a1ac7, 0 0 2em #000000, 0 0 0.2em #000000',
+                    textShadow: '1px 1px 2px #1a1a1ac7',
                   }}
                 >
                   thirofoo_Home

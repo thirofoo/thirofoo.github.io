@@ -1,14 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Raleway:wght@300&family=Rampart+One&display=swap');
+  
   .title{
     position: relative;
     display: inline-block;
-    font-size: 40px;
+    font-size: 10vw;
     padding-bottom: 5px;
     animation-name: fade;
     animation-duration: 3s;
     animation-iteration-count: 1;
-    margin-top: calc(35vh - 150px);
+    margin-top: calc(40vh - 130.4px);
+    font-family: 'Raleway', sans-serif;
   }
-
+  
   .title::after{
     position: absolute;
     top: -2px;
@@ -21,8 +25,80 @@
     animation-delay: 0s;
     transition-duration: 3s;
     border-bottom: 3px solid rgba(148, 131, 131, 0.664);
-    transform: scale(1.05, 1);
+    transform: scale(0.8, 1);
   }
+
+  @keyframes underline{
+    0%{
+      border-bottom: 3px solid rgba(148, 131, 131, 0.664);
+      transform: scale(0, 1);
+    }
+    30%{
+      border-bottom: 3px solid rgba(148, 131, 131, 0.664);
+      transform: scale(0, 1);
+    }
+    100%{
+      border-bottom: 3px solid rgba(148, 131, 131, 0.664);
+      transform: scale(0.8, 1);
+    }
+  }
+
+  @media (min-width: 800px) {
+    .title {
+      font-size: 50px;
+    }
+    
+    .title::after{
+      position: absolute;
+      top: -2px;
+      right: -2px;
+      bottom: -5px;
+      left: -2px;
+      content: '';
+      animation-name: underline;
+      animation-duration: 3s;
+      animation-delay: 0s;
+      transition-duration: 3s;
+      border-bottom: 3px solid rgba(148, 131, 131, 0.664);
+      transform: scale(1.05, 1);
+    }
+
+    @keyframes underline{
+      0%{
+        border-bottom: 3px solid rgba(148, 131, 131, 0.664);
+        transform: scale(0, 1);
+      }
+      30%{
+        border-bottom: 3px solid rgba(148, 131, 131, 0.664);
+        transform: scale(0, 1);
+      }
+      100%{
+        border-bottom: 3px solid rgba(148, 131, 131, 0.664);
+        transform: scale(1.05, 1);
+      }
+    }
+  }
+
+  .subtitle{
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+    margin-top: 45vh;
+  }
+
+  .subcontent{
+    font-family: 'M PLUS 1p', sans-serif;
+  }
+
+  .content{
+    font-size: 20px;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    width: 70vw;
+    text-align: center;
+    align-items: center;
+    font-family: 'M PLUS 1p', sans-serif;
+  }
+
 
   /* .title::before{
     position: absolute;
@@ -47,26 +123,14 @@
 
   .under{
     margin-bottom: 10vh;
+    font-size: 30px;
   }
 
   p{
     margin-top: 20px;
   }
   
-  @keyframes underline{
-    0%{
-      border-bottom: 3px solid rgba(148, 131, 131, 0.664);
-      transform: scale(0, 1);
-    }
-    30%{
-      border-bottom: 3px solid rgba(148, 131, 131, 0.664);
-      transform: scale(0, 1);
-    }
-    100%{
-      border-bottom: 3px solid rgba(148, 131, 131, 0.664);
-      transform: scale(1.05, 1);
-    }
-  }
+ 
 
   @keyframes underline2{
     0%{
@@ -145,5 +209,9 @@
       opacity: 1;
       transform: translateY(0) scale(1) rotate(-45deg);
     }
+  }
+
+  .ready{
+    opacity: 0;
   }
   

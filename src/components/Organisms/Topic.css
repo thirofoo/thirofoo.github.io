@@ -1,12 +1,12 @@
   .container{
       display: inline-block;
       text-align: center;
-      margin: 3vw;
+      margin: 3vw 3vw 5vh 3vw;
       border: 1px 1px 1px black;
       border-radius: 10px;
       -webkit-backdrop-filter: blur(17px);
-      backdrop-filter: blur(17px);
-      box-shadow: 0 5px 20px rgba(77, 77, 77, 0.5);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 5px 20px rgba(77, 77, 77, 0.76);
   }
 
   .smallTitle{
@@ -17,8 +17,8 @@
       padding: 10px 10px 0px 10px;
       background-color: #979090;
       border-radius: 10px 10px 0px 0px;
-      border: 1px solid rgb(141, 135, 135);
       opacity: 0.8;
+      font-size: 20px;
   }
 
   .topic{
@@ -29,5 +29,4 @@
       padding: 10px;
       border-radius: 0px 0px 10px 10px;
       background-color: rgba(97, 97, 97, 0.089);
-      border: 1px solid rgb(141, 135, 135);
   }

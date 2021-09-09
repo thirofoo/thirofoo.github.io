@@ -14,6 +14,7 @@ import Header_profile from '../templates/profile/Header_profile'
 import Header_product from '../templates/product/Header_product'
 import Header_config from '../templates/config/Header_config'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
+import ScrollToTop from 'components/templates/ScrollToTop'
 
 function Copyright() {
   return (
@@ -184,6 +185,7 @@ function Paperbase(props: PaperbaseProps) {
   return (
     <ThemeProvider theme={theme}>
       <Router>
+        <ScrollToTop></ScrollToTop>
         <div className="root">
           <CssBaseline />
           <nav className={classes.drawer}>
@@ -213,10 +215,10 @@ function Paperbase(props: PaperbaseProps) {
                 overflow: 'hidden',
               }}
             >
-              <Route exact path="/" component={Content_home} />
-              <Route path="/profile" component={Content_profile} />
-              <Route path="/product" component={Content_product} />
               <Route path="/config" component={Content_config} />
+              <Route path="/product" component={Content_product} />
+              <Route path="/profile" component={Content_profile} />
+              <Route exact path="/" component={Content_home} />
             </main>
             <footer className={classes.footer}>
               <Copyright />
