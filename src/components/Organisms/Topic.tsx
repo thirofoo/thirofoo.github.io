@@ -16,17 +16,23 @@ import './Topic.css'
 type Props = {
   smallTitle: string
   content: string
+  url: string
 }
 
-const Topic: React.FC<Props> = ({ smallTitle, content }) => {
+const Topic: React.FC<Props> = ({ smallTitle, content, url }) => {
   return (
     <div className="container">
-      <Typography align="center" className="smallTitle">
-        {smallTitle}
-      </Typography>
-      <Typography align="center" className="topic">
-        {content}
-      </Typography>
+      <div>
+        <Typography align="center">
+          <a href={url} className="smallTitle">
+            {' '}
+            ・{smallTitle}{' '}
+          </a>
+        </Typography>
+        <Typography align="center" className="topic">
+          <div className="explain">{content}</div>
+        </Typography>
+      </div>
     </div>
   )
 }

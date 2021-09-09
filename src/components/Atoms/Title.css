@@ -4,7 +4,7 @@
   .title{
     position: relative;
     display: inline-block;
-    font-size: 10vw;
+    font-size: 35px;
     padding-bottom: 5px;
     animation-name: fade;
     animation-duration: 3s;
@@ -28,6 +28,19 @@
     transform: scale(0.8, 1);
   }
 
+  .content{
+    font-size: 15px;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    width: 70vw;
+    text-align: center;
+    align-items: center;
+    font-family: 'M PLUS 1p', sans-serif;
+    animation: fade2;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+  }
+
   @keyframes underline{
     0%{
       border-bottom: 3px solid rgba(148, 131, 131, 0.664);
@@ -43,60 +56,10 @@
     }
   }
 
-  @media (min-width: 800px) {
-    .title {
-      font-size: 50px;
-    }
-    
-    .title::after{
-      position: absolute;
-      top: -2px;
-      right: -2px;
-      bottom: -5px;
-      left: -2px;
-      content: '';
-      animation-name: underline;
-      animation-duration: 3s;
-      animation-delay: 0s;
-      transition-duration: 3s;
-      border-bottom: 3px solid rgba(148, 131, 131, 0.664);
-      transform: scale(1.05, 1);
-    }
-
-    @keyframes underline{
-      0%{
-        border-bottom: 3px solid rgba(148, 131, 131, 0.664);
-        transform: scale(0, 1);
-      }
-      30%{
-        border-bottom: 3px solid rgba(148, 131, 131, 0.664);
-        transform: scale(0, 1);
-      }
-      100%{
-        border-bottom: 3px solid rgba(148, 131, 131, 0.664);
-        transform: scale(1.05, 1);
-      }
-    }
-  }
-
   .subtitle{
     font-family: 'Raleway', sans-serif;
     font-size: 40px;
     margin-top: 45vh;
-  }
-
-  .subcontent{
-    font-family: 'M PLUS 1p', sans-serif;
-  }
-
-  .content{
-    font-size: 20px;
-    margin-left: 15vw;
-    margin-right: 15vw;
-    width: 70vw;
-    text-align: center;
-    align-items: center;
-    font-family: 'M PLUS 1p', sans-serif;
   }
 
 
@@ -114,17 +77,6 @@
     border-bottom: 3px solid #eaeff1;
     transform: translate(-100%, 0), scale(1.05, 1);
   } */
-
- .little{
-   animation: fade2;
-   animation-duration: 5s;
-   animation-iteration-count: 1;
- }
-
-  .under{
-    margin-bottom: 10vh;
-    font-size: 30px;
-  }
 
   p{
     margin-top: 20px;
@@ -215,3 +167,44 @@
     opacity: 0;
   }
   
+  @media (min-width: 800px) {
+    .title {
+      font-size: 50px;
+    }
+
+    .content {
+      font-size: 20px;
+    }
+    
+    .title::after{
+      position: absolute;
+      top: -2px;
+      right: -2px;
+      bottom: -5px;
+      left: -2px;
+      content: '';
+      animation-name: underline;
+      animation-duration: 3s;
+      animation-delay: 0s;
+      transition-duration: 3s;
+      border-bottom: 3px solid rgba(148, 131, 131, 0.664);
+      transform: scale(1.05, 1);
+    }
+
+
+    @keyframes underline{
+      0%{
+        border-bottom: 3px solid rgba(148, 131, 131, 0.664);
+        transform: scale(0, 1);
+      }
+      30%{
+        border-bottom: 3px solid rgba(148, 131, 131, 0.664);
+        transform: scale(0, 1);
+      }
+      100%{
+        border-bottom: 3px solid rgba(148, 131, 131, 0.664);
+        transform: scale(1.05, 1);
+      }
+    }
+
+  }

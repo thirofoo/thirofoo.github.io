@@ -12,10 +12,14 @@ const Content_config: React.FC = () => {
         discription="ここでは様々な設定をすることが出来るようにする予定です！"
         discription2=""
       ></Title>
-      <Topic smallTitle="There is no topic now!" content="Coming soon..."></Topic>
-      <Topic smallTitle="There is no topic now!" content="Coming soon..."></Topic>
-      <Topic smallTitle="There is no topic now!" content="Coming soon..."></Topic>
-      <Topic smallTitle="There is no topic now!" content="Coming soon..."></Topic>
+      <Topic
+        url="https://tetris-application.herokuapp.com/"
+        smallTitle="There is no topic now!"
+        content="Coming soon..."
+      ></Topic>
+      <Topic url="" smallTitle="There is no topic now!" content="Coming soon..."></Topic>
+      <Topic url="" smallTitle="There is no topic now!" content="Coming soon..."></Topic>
+      <Topic url="" smallTitle="There is no topic now!" content="Coming soon..."></Topic>
     </React.Fragment>
   )
 }

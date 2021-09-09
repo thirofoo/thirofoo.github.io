@@ -24,12 +24,12 @@ const Content_home: React.FC = () => {
         <SubContent subtitle="Main topic" subcontent=""></SubContent>
         <span className="next"></span>
         <div style={{ display: 'inline', float: 'left' }}>
-          <Topic smallTitle="There is no topic now!" content="Coming soon..."></Topic>
-          <Topic smallTitle="There is no topic now!" content="Coming soon..."></Topic>
-          <Topic smallTitle="There is no topic now!" content="Coming soon..."></Topic>
-          <Topic smallTitle="There is no topic now!" content="Coming soon..."></Topic>
-          <Topic smallTitle="There is no topic now!" content="Coming soon..."></Topic>
-          <Topic smallTitle="There is no topic now!" content="Coming soon..."></Topic>
+          <Topic url="" smallTitle="There is no topic now!" content="Coming soon..."></Topic>
+          <Topic url="" smallTitle="There is no topic now!" content="Coming soon..."></Topic>
+          <Topic url="" smallTitle="There is no topic now!" content="Coming soon..."></Topic>
+          <Topic url="" smallTitle="There is no topic now!" content="Coming soon..."></Topic>
+          <Topic url="" smallTitle="There is no topic now!" content="Coming soon..."></Topic>
+          <Topic url="" smallTitle="There is no topic now!" content="Coming soon..."></Topic>
         </div>
       </div>
     </React.Fragment>

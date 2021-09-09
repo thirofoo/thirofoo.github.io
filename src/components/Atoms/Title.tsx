@@ -13,8 +13,8 @@ const Title: React.FC<Props> = ({ top, discription, discription2 }) => {
       <div className="position">
         <div className="top">
           <h1 className="title">{top} </h1>
-          <p className="little content"> {discription}</p>
-          <p className="little content"> {discription2}</p>
+          <p className="content"> {discription}</p>
+          <p className="content"> {discription2}</p>
           {/* <h2 className="little under"></h2> */}
         </div>
       </div>

@@ -11,11 +11,11 @@ const SubContent: React.FC<Props> = ({ subtitle, subcontent }) => {
   const [isAnimation2, setIsAnimation2] = useState(false)
   const subtitle_class = document.getElementsByClassName('subtitle')
   const subtitle_class_change = 100
-  const subtitle2_class_change = 600
+  const subtitle2_class_change = 650
 
   window.addEventListener(
     'scroll',
-    function (e) {
+    function () {
       if (!isAnimation) {
         window.requestAnimationFrame(function () {
           if (subtitle_class_change < window.scrollY) {
@@ -30,7 +30,7 @@ const SubContent: React.FC<Props> = ({ subtitle, subcontent }) => {
 
   window.addEventListener(
     'scroll',
-    function (e) {
+    function () {
       if (!isAnimation2) {
         window.requestAnimationFrame(function () {
           if (subtitle2_class_change < window.scrollY) {
@@ -46,7 +46,7 @@ const SubContent: React.FC<Props> = ({ subtitle, subcontent }) => {
   return (
     <div>
       <h2 className="subtitle ready">{subtitle}</h2>
-      <p className="subcontent" style={{ marginLeft: '15%', marginRight: '15%', display: 'block', fontSize: '20px' }}>
+      <p className="content" style={{ marginLeft: '15%', marginRight: '15%', display: 'block' }}>
         {subcontent}
       </p>
     </div>
