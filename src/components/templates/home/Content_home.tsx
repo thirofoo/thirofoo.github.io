@@ -19,7 +19,7 @@ const Content_home: React.FC = () => {
       <div>
         <SubContent
           subtitle="About me"
-          subcontent=" 栃木生まれ・栃木育ちの埼玉大学工学部情報工学科1年。プログラミングを始めたのは大学生になってからでまだ初心者。どちらかというとバックエンドに興味を持っている。thirofooという名前の由来は自分でもわからないが、小学生のころから使っている名前の1つ。"
+          subcontent=" 栃木出身の埼玉大学工学部情報工学科1年。プログラミングを始めたのは大学生になってからでまだ初心者。thirofooという名前の由来は自分でもわからないが、小学生のころから使っている名前の1つ。"
         ></SubContent>
         <SubContent subtitle="Main topic" subcontent=""></SubContent>
         <span className="next"></span>
