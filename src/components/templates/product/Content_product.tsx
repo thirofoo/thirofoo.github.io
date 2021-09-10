@@ -9,7 +9,7 @@ const Content_profile: React.FC = () => {
       <div className="subtitle" style={{ padding: 0, margin: 0 }}></div>
       <Title
         top="Product"
-        discription="ここでは今までで作ってきたweb系のものをを書き連ねていく予定です！ "
+        discription="ここでは今までで作ってきたものを掲載していく予定です！ "
         discription2=""
       ></Title>
       <Topic

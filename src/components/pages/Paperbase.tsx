@@ -15,6 +15,7 @@ import Header_product from '../templates/product/Header_product'
 import Header_config from '../templates/config/Header_config'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import ScrollToTop from 'components/templates/ScrollToTop'
+import Notification from 'components/templates/Notification'
 
 function Copyright() {
   return (
@@ -64,7 +65,7 @@ theme = {
   overrides: {
     MuiDrawer: {
       paper: {
-        backgroundColor: '#00000050',
+        backgroundColor: '#00000070',
       },
     },
     MuiButton: {
@@ -113,7 +114,8 @@ theme = {
     },
     MuiDivider: {
       root: {
-        backgroundColor: '#404854',
+        backgroundColor: '#000000',
+        height: '1.1px',
       },
     },
     MuiListItemText: {
@@ -177,9 +179,14 @@ export interface PaperbaseProps extends WithStyles<typeof styles> {
 function Paperbase(props: PaperbaseProps) {
   const { classes } = props
   const [mobileOpen, setMobileOpen] = React.useState(false)
+  const [mobileOpen2, setMobileOpen2] = React.useState(false)
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen)
+  }
+
+  const handleDrawerToggle2 = () => {
+    setMobileOpen2(!mobileOpen2)
   }
 
   return (
@@ -196,17 +203,42 @@ function Paperbase(props: PaperbaseProps) {
               variant="temporary"
               open={mobileOpen}
               onClose={handleDrawerToggle}
+              onDrawerToggle={handleDrawerToggle}
+            />
+            <Notification
+              PaperProps={{ style: { width: drawerWidth } }}
+              variant="temporary"
+              open={mobileOpen2}
+              onClose={handleDrawerToggle2}
             />
             {/* </Hidden> */}
             {/* <Hidden xlDown implementation="css">
               <Navigator PaperProps={{ style: { width: drawerWidth } }} />
             </Hidden> */}
           </nav>
+
           <div className={classes.app}>
-            <Route exact path="/" render={() => <Header_home onDrawerToggle={handleDrawerToggle} />}></Route>
-            <Route path="/profile" render={() => <Header_profile onDrawerToggle={handleDrawerToggle} />}></Route>
-            <Route path="/product" render={() => <Header_product onDrawerToggle={handleDrawerToggle} />}></Route>
-            <Route path="/config" render={() => <Header_config onDrawerToggle={handleDrawerToggle} />}></Route>
+            <Route
+              exact
+              path="/"
+              render={() => <Header_home onDrawerToggle={handleDrawerToggle} onDrawerToggle2={handleDrawerToggle2} />}
+            ></Route>
+            <Route
+              path="/profile"
+              render={() => (
+                <Header_profile onDrawerToggle={handleDrawerToggle} onDrawerToggle2={handleDrawerToggle2} />
+              )}
+            ></Route>
+            <Route
+              path="/product"
+              render={() => (
+                <Header_product onDrawerToggle={handleDrawerToggle} onDrawerToggle2={handleDrawerToggle2} />
+              )}
+            ></Route>
+            <Route
+              path="/config"
+              render={() => <Header_config onDrawerToggle={handleDrawerToggle} onDrawerToggle2={handleDrawerToggle2} />}
+            ></Route>
             {/* <Header onDrawerToggle={handleDrawerToggle} /> */}
             <main
               className={classes.main}

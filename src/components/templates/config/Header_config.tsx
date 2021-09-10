@@ -55,10 +55,11 @@ const theme = createTheme({
 
 interface HeaderProps extends WithStyles<typeof styles> {
   onDrawerToggle: () => void
+  onDrawerToggle2: () => void
 }
 
 function Header_home(props: HeaderProps) {
-  const { classes, onDrawerToggle } = props
+  const { classes, onDrawerToggle, onDrawerToggle2 } = props
 
   return (
     <React.Fragment>
@@ -69,14 +70,16 @@ function Header_home(props: HeaderProps) {
               {/* <Hidden xlUp> */}
               {/* <Hidden smUp> ここはメニューバーが現れるタイミング*/}
               <Grid item>
-                <IconButton
-                  color="inherit"
-                  aria-label="open drawer"
-                  onClick={onDrawerToggle}
-                  className={classes.menuButton}
-                >
-                  <MenuIcon />
-                </IconButton>
+                <Tooltip title="Menu">
+                  <IconButton
+                    color="inherit"
+                    aria-label="open drawer"
+                    onClick={onDrawerToggle}
+                    className={classes.menuButton}
+                  >
+                    <MenuIcon />
+                  </IconButton>
+                </Tooltip>
               </Grid>
               {/* </Hidden> */}
               <Grid item xs />
@@ -88,7 +91,12 @@ function Header_home(props: HeaderProps) {
 
               <Grid item>
                 <Tooltip title="Alerts • No alerts">
-                  <IconButton color="inherit">
+                  <IconButton
+                    color="inherit"
+                    aria-label="open drawer"
+                    onClick={onDrawerToggle2}
+                    className={classes.menuButton}
+                  >
                     <NotificationsIcon />
                   </IconButton>
                 </Tooltip>
@@ -96,7 +104,7 @@ function Header_home(props: HeaderProps) {
             </Grid>
           </Toolbar>
         </AppBar>
-        <AppBar component="div" className={classes.secondaryBar} color="primary" position="static" elevation={0}>
+        {/* <AppBar component="div" className={classes.secondaryBar} color="primary" position="static" elevation={0}>
           <Toolbar>
             <Grid container alignItems="center" spacing={1}>
               <Grid item xs>
@@ -128,13 +136,12 @@ function Header_home(props: HeaderProps) {
           elevation={0}
           style={{ textShadow: '-moz-initial' }}
         >
-          {/* <Tabs value={0} textColor="inherit">
-            <Tabs value={isActivce} textColor="inherit">
+          <Tabs value={isActivce} textColor="inherit">
             <Tab textColor="inherit" label="Top" onClick={() => setIsActive(0)} />
             <Tab textColor="inherit" label="News" onClick={() => setIsActive(1)} />
             <Tab textColor="inherit" label="others" onClick={() => setIsActive(2)} />
-          </Tabs> */}
-        </AppBar>
+          </Tabs>
+        </AppBar> */}
       </ThemeProvider>
     </React.Fragment>
   )

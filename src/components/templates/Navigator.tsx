@@ -1,8 +1,8 @@
 import React from 'react'
 // import { children } from 'react';
 import clsx from 'clsx'
-import { createStyles, Theme, withStyles, WithStyles } from '@material-ui/core/styles'
 import Divider from '@material-ui/core/Divider'
+import { createStyles, Theme, withStyles, WithStyles } from '@material-ui/core/styles'
 import Drawer, { DrawerProps } from '@material-ui/core/Drawer'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
@@ -50,7 +50,7 @@ const styles = (theme: Theme) =>
       paddingBottom: theme.spacing(2),
     },
     firebase: {
-      fontSize: 24,
+      fontSize: 20,
       color: theme.palette.common.white,
     },
     iconButtonAvatar: {
@@ -58,7 +58,8 @@ const styles = (theme: Theme) =>
       right: '5px',
     },
     itemActiveItem: {
-      color: '#322121f1',
+      fontSize: 23,
+      color: '#c0c0ff',
     },
     itemPrimary: {
       fontSize: 'inherit',
@@ -72,10 +73,12 @@ const styles = (theme: Theme) =>
     },
   })
 
-export interface NavigatorProps extends Omit<DrawerProps, 'classes'>, WithStyles<typeof styles> {}
+export interface NavigatorProps extends Omit<DrawerProps, 'classes'>, WithStyles<typeof styles> {
+  onDrawerToggle: () => void
+}
 
 function Navigator(props: NavigatorProps) {
-  const { classes, ...other } = props
+  const { classes, onDrawerToggle, ...other } = props
 
   const [homeActive, setHomeActive] = useState(true)
   const [profileActive, setProfileActive] = useState(false)
@@ -126,15 +129,10 @@ function Navigator(props: NavigatorProps) {
               <Avatar src="./img/night.jpg" alt="Takahashi Hiroto" />
             </IconButton>
           </Grid>
-          T.Hiroto
+          thirofoo_home
           <Grid item>
             <Tooltip title="Help">
-              <IconButton
-                color="inherit"
-                style={{
-                  left: '50px',
-                }}
-              >
+              <IconButton color="inherit">
                 <HelpIcon />
               </IconButton>
             </Tooltip>
@@ -149,7 +147,7 @@ function Navigator(props: NavigatorProps) {
               primary: classes.itemPrimary,
             }}
           >
-            <a href="http://www.saitama-u.ac.jp/" style={{ color: 'white', textDecoration: 'none' }}>
+            <a href="http://www.saitama-u.ac.jp/" style={{ color: 'white', textDecoration: 'none', fontSize: '20px' }}>
               Saitama.univ
             </a>
           </ListItemText>
@@ -172,7 +170,10 @@ function Navigator(props: NavigatorProps) {
                   key={childId}
                   button
                   className={clsx(classes.item, active && classes.itemActiveItem)}
-                  onClick={() => setActive(childId)}
+                  onClick={() => {
+                    setActive(childId)
+                    onDrawerToggle()
+                  }}
                 >
                   <ListItemIcon className={classes.itemIcon}>{icon}</ListItemIcon>
                   <ListItemText

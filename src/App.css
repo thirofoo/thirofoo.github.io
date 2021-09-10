@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@1,600;1,700&family=Noto+Sans+JP:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 
 .App {
   text-align: center;
@@ -14,13 +14,8 @@
   overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.thirofoo_home{
+/* .thirofoo_home{
   animation-name: move;
   animation-iteration-count: infinite;
   animation-duration: 40s;
@@ -28,7 +23,7 @@
   transform: translate(0,0);
   overflow: hidden;
   font-family: 'Noto Sans JP', sans-serif;
-}
+} */
 
 /* 
 @keyframes move {
@@ -72,11 +67,39 @@
 }
 
 .root{
-    text-align: center;
-    background-image: url(./img/back.jpg);
-    background-position: center;
-    background-size: cover;
-    width: 100vw;
-    background-repeat: repeat;
-    background-attachment: fixed;
+  text-align: center;
+  background-image: url(./img/back.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+.item{
+  padding-top: 1;
+  padding-bottom: 1;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.notif{
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes notif {
+  0%{
+
+  }
+  100%{
+
+  }
 }
