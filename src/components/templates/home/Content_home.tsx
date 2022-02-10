@@ -8,18 +8,18 @@ const Content_home: React.FC = () => {
     <React.Fragment>
       <Title
         top="Welecome to thirofoo_home!"
-        discription="ここはt.hirotoのhomepageです！のんびり発展させていきます！(9/5 開設)"
-        discription2=""
+        discription="ここはthirofooのhomepageです！のんびりと発展させていきます。"
+        discription2="適当に自分のことを掲載していく予定。"
       ></Title>
       {/* <Title
         top="Welecome to thirofoo_home!"
-        discription="ここはT.hirotoのhomepageです！これからのんびりと発展させていきます！(at 9/5) 主に自分のprofileと今まで作ってきたproductをまとめていく予定です！(まだまとめる程のproductは無いけど...)"
+        discription="ここはthirofooのhomepage。これからのんびりと発展させていく予定。主に自分のprofileと今まで作ってきたproductをまとめていく予定です！(まとめると言う程productは無い)"
       ></Title> */}
 
       <div>
         <SubContent
           subtitle="About me"
-          subcontent=" 栃木出身の埼玉大学工学部情報工学科1年。プログラミングを始めたのは大学生になってからでまだ初心者。thirofooという名前の由来は自分でもわからないが、小学生のころから使っている名前の1つ。"
+          subcontent=" 栃木出身の埼玉大学工学部情報工学科1年。プログラミングを始めたのは大学生になってからでまだ初心者。 競技プログラミングにはまり中。現在(2/7)AtCorder茶。 Web系の活動は全く出来ていない。"
         ></SubContent>
         <SubContent subtitle="Main topic" subcontent=""></SubContent>
         <span className="next"></span>

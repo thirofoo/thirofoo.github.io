@@ -15,7 +15,7 @@ const Content_profile: React.FC = () => {
       <Topic
         url="https://tetris-application.herokuapp.com/"
         smallTitle="Tetris"
-        content="初めて立ち上げたwebサイトです！　クロスプラットホームでないため、smartphoneではプレイできない仕様。出来ればノートPCのフルスクリーンでのプレイを推奨。"
+        content="　初めて作ったwebサイト。キーボード操作の為スマホでは操作できない＆スマホでやる用に作っていない為スマホだと作画崩壊を起こす。またパソコンでやっても軽く作画崩壊。さらにはTスピンも出来ない糞仕様。とにかく何から何まで初めての状態で作った為ボロボロだが、思い出のサイト。"
       ></Topic>
       <Topic url="" smallTitle="There is no topic now!" content="Coming soon... "></Topic>
       <Topic url="" smallTitle="There is no topic now!" content="Coming soon..."></Topic>

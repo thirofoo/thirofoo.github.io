@@ -163,6 +163,7 @@ const styles = createStyles({
   main: {
     flex: 1,
     // padding: theme.spacing(6, 4),
+    //背景の透過度と色
     background: '#ffffffdd',
     paddingTop: 0,
   },

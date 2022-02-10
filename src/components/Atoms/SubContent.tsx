@@ -46,7 +46,7 @@ const SubContent: React.FC<Props> = ({ subtitle, subcontent }) => {
   return (
     <div>
       <h2 className="subtitle ready">{subtitle}</h2>
-      <p className="content" style={{ marginLeft: '15%', marginRight: '15%', display: 'block' }}>
+      <p className="content" style={{ marginLeft: '20%', marginRight: '20%', display: 'block', maxWidth: '60%' }}>
         {subcontent}
       </p>
     </div>
